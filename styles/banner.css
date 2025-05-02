@@ -1,0 +1,66 @@
+
+/* Code adapted from this tutorial: https://youtu.be/UKHXjhyumF0?si=kzT1-e8dcPMvjRfa */
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .bannerContainer {
+    position: relative;
+    z-index: 10;
+    left: 0;
+    right: 0;
+  }
+  
+  .ticker-tape {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    border-top: 1px solid var(--xblue);
+    border-bottom: 1px solid var(--xblue);
+  }
+  
+  /* TODO: update w/ webkit version when you have a chance */
+.ticker {
+    display: flex;
+    line-height: 2;
+    white-space: nowrap;
+    width: max-content;
+    /* animation: scroll-animation 10s linear infinite; */
+  }
+
+  .ticker__group {
+    display: flex;
+    flex-shrink: 0;
+  }
+  
+  .ticker-tape .ticker__item {
+    display: inline-block;
+    padding: 0 3rem;
+    text-transform: lowercase;
+    color: var(--xblue);
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+
+  @keyframes scroll-animation {
+    0% {
+        transform: translateX(0%);
+      }
+      25% {
+        transform: translateX(-12.5%);
+      }
+      50% {
+        transform: translateX(-25%);
+      }
+      75% {
+        transform: translateX(-37.5%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+  }

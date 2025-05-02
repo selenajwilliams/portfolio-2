@@ -1,0 +1,39 @@
+/* project card related css */
+
+
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 0.5em;
+    border-radius: 20px;
+    transition: transform 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.projectCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.pcImage {
+    max-width: inherit;
+    border-radius: 15px;
+    height: 400px;
+    object-fit: ;
+}
+
+.pcHeader {
+    /* text-align: le; */
+    font-weight: bold;
+    line-height: 2;
+
+}
+
+.pcDesc {
+    /* text-align: center; */
+    font-size: smaller;
+    line-height: 2;
+}

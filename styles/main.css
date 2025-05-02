@@ -1,0 +1,103 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+* {
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+  h1 {
+    font-size: x-large;
+  }
+  h2 {
+    font-size: large;
+    font-weight: lighter;
+  }
+
+  .containerFullWidth {
+    width: 100vw;
+  }
+
+  .container {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+
+  /* HERO SECTION*/
+
+  .hero {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+
+    padding: 1em;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0 auto;
+    /* position: relative; */
+  }
+
+  .heroLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    width: 50%;
+    /* background-color: aliceblue; */
+    padding-left: 2em;
+    padding-right: 1em;
+    /* text things */
+    color: #4D74A4;
+    font-weight: bold;
+  }
+
+  .heroRight {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    /* background-color: beige; */
+    width: 50%;
+  }
+
+  .heroText {
+    max-width: 600px;
+  }
+
+  .heroImg {
+    border-radius: 100%;
+    max-width: 250px;
+    object-fit: contain;
+  }
+
+
+  /* nav bar related code */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    padding: 0 0.25em;
+    padding-right: 30px;
+  }
+  
+  .navbar a {
+    padding: 0.5em 1em;
+    color: black;
+    /* color: var(--xblue); */
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+
+  .navbar a:hover {
+    font-style: italic;
+  }
+  
