@@ -3,12 +3,34 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    color: var(--xblue);
   }
 
 * {
     box-sizing: border-box;
     /* overflow-x: hidden; */
 }
+
+a {
+  color: unset;
+  /* text-decoration-line: unset; */
+  text-decoration-thickness: 1px;
+  /* text-underline-offset: 2px; */
+  /* display: inline-flex; */
+  /* align-items: center; */
+
+}
+/* external link icon
+a[href^="http"]:not([href*="yourdomain.com"])::after {
+  content: " ↗";
+  display: inline-block;
+  margin-left: 5px;
+} */
+
+a:hover {
+  font-style: italic;
+}
+
 
   h1 {
     font-size: x-large;
@@ -23,11 +45,13 @@ body {
   }
 
   .container {
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     max-width: 800px;
+    justify-content: center;
+    /* align-items: center; */
   }
 
 
@@ -83,6 +107,7 @@ body {
   .navbar {
     display: flex;
     justify-content: flex-end;
+
     font-weight: bold;
     padding: 0 0.25em;
     padding-right: 30px;
@@ -96,7 +121,13 @@ body {
     transition: background 0.3s;
   }
   
+  /* .navbar a.active {
+    font-style: italic;
+    color: var(--xblue);
+    color: var(--secondary);
 
+  } */
+  
   .navbar a:hover {
     font-style: italic;
   }

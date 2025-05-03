@@ -1,0 +1,44 @@
+/* .aboutContent {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+} */
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    padding-top: 4em;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.aboutImg {
+    justify-content: center;
+    width: inherit;
+}
+
+
+.aboutText {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: inherit;
+}
+
+.logo {
+    max-height: 50px;
+    object-fit: contain;
+    border-radius: 10%;
+}
+

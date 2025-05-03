@@ -1,16 +1,35 @@
 /* project card related css */
 
+.projects {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    /* padding-left: 50px; Create the space to shift the first card */
+    scroll-snap-type: x mandatory; /* Optional, for snapping if desired */
+    
+    /*flex grid approach*/
+    /* display: grid; */
+    /* flex-wrap: wrap; */
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.projects::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 
 .projectCard {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
-    padding: 0.5em;
-    border-radius: 20px;
+    width: fit-content;
     transition: transform 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
+
+
+/* .projectCard:first-child {
+    margin-left: -50px;
+} */
+
 
 .projectCard:hover {
     transform: translateY(-8px);
@@ -22,7 +41,7 @@
     max-width: inherit;
     border-radius: 15px;
     height: 400px;
-    object-fit: ;
+    
 }
 
 .pcHeader {
