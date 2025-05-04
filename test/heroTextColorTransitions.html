@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Sentence</title>
+  <style>
+    .sentence {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    /* .word {
+      transition: color 1s ease;
+    } */
+
+    .empathy, .build-ai, .impact, .innovates {
+      color: black;
+    }
+
+    .word {
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    /* Keyframes for smooth fading in sequence */
+    @keyframes colorInnovates {
+    0%, 5%   { color: black; }
+    10%      { color: blue; }
+    20%      { color: blue; }
+    100%     { color: blue; }
+    }
+
+    @keyframes colorEmpathy {
+    0%, 20%  { color: black; }
+    25%      { color: purple; }
+    40%      { color: purple; }
+    100%     { color: purple; }
+    }
+
+    @keyframes colorBuildAI {
+    0%, 40%  { color: black; }
+    45%      { color: green; }
+    60%      { color: green; }
+    100%     { color: green; }
+    }
+
+    @keyframes colorImpact {
+    0%, 60%  { color: black; }
+    65%      { color: red; }
+    80%      { color: red; }
+    100%     { color: red; }
+    }
+
+    /* Apply animations */
+    .innovates { animation-name: colorInnovates; }
+    .empathy   { animation-name: colorEmpathy; }
+    .build-ai  { animation-name: colorBuildAI; }
+    .impact    { animation-name: colorImpact; }
+  </style>
+</head>
+<body>
+
+  <div class="sentence">
+    Selena <span class="word innovates">innovates</span> with <span class="word empathy">empathy</span> to <span class="word build-ai">build AI</span> with <span class="word impact">impact</span>
+  </div>
+
+</body>
+</html>

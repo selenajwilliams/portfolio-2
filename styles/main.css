@@ -8,37 +8,26 @@ body {
 
 * {
     box-sizing: border-box;
-    /* overflow-x: hidden; */
 }
 
 a {
   color: unset;
-  /* text-decoration-line: unset; */
   text-decoration-thickness: 1px;
-  /* text-underline-offset: 2px; */
-  /* display: inline-flex; */
-  /* align-items: center; */
 
 }
-/* external link icon
-a[href^="http"]:not([href*="yourdomain.com"])::after {
-  content: " ↗";
-  display: inline-block;
-  margin-left: 5px;
-} */
 
 a:hover {
   font-style: italic;
 }
 
-
+/* 
   h1 {
     font-size: x-large;
   }
   h2 {
     font-size: large;
     font-weight: lighter;
-  }
+  } */
 
   .containerFullWidth {
     width: 100vw;
@@ -57,7 +46,95 @@ a:hover {
 
   /* HERO SECTION*/
 
-  .hero {
+  .hero2 {
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding: 1em;
+    padding-top: 4em;
+    padding-bottom: em;
+    /* padding-left: 3rem; */
+    /* padding-right: 3rem; */
+    margin: 0 auto;
+    /* position: relative; */
+  }
+
+
+  .heroText {
+    /* background-color: aliceblue; */
+    max-width: 580px; /* adding this so that empathy is the last word on the firs tline*/
+    /* font-size: xxx-large; */
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+
+  .word {
+      animation-duration: 8s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  }
+
+  /* Keyframes for smooth fading in sequence */
+  /* Color animations were AI-assisted */
+  @keyframes colorInnovates {
+    0%, 10%   { color: var(--xblue); }
+    20%       { color: blue; }
+    30%       { color: blue; }
+    100%      { color: blue; }
+  }
+  
+  @keyframes colorEmpathy {
+    0%, 20%   { color: var(--xblue); }
+    30%       { color: purple; }
+    40%       { color: purple; }
+    100%      { color: purple; }
+  }
+  
+  @keyframes colorBuildAI {
+    0%, 30%   { color: var(--xblue); }
+    40%       { color: green; }
+    50%       { color: green; }
+    100%      { color: green; }
+  }
+  
+  @keyframes colorImpact {
+    0%, 40%   { color: var(--xblue); }
+    50%       { color: red; }
+    60%       { color: red; }
+    100%      { color: red; }
+  }
+
+  /* Apply animations -- commenting out for now because it kind of hurts my eyes */
+  /* .innovates { animation-name: colorInnovates; }
+  .empathy   { animation-name: colorEmpathy; }
+  .build-ai  { animation-name: colorBuildAI; }
+  .impact    { animation-name: colorImpact; } */
+
+
+  .heroIcons {
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+  }
+
+  .heroIcon {
+    max-width: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+
+  .heroIcon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  /* .hero {
     display: flex;
     flex-direction: row;
     align-self: center;
@@ -67,32 +144,30 @@ a:hover {
     padding-left: 3rem;
     padding-right: 3rem;
     margin: 0 auto;
-    /* position: relative; */
-  }
+  } */
 
-  .heroLeft {
+  /* .heroLeft {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     width: 50%;
-    /* background-color: aliceblue; */
+    /* background-color: aliceblue;
     padding-left: 2em;
     padding-right: 1em;
-    /* text things */
+    /* text things 
     color: #4D74A4;
     font-weight: bold;
-  }
+  }*/
 
-  .heroRight {
+  /* .heroRight {
     width: 50%;
     display: flex;
     justify-content: center;
-    /* background-color: beige; */
     width: 50%;
-  }
+  } */
 
-  .heroText {
+  /* .heroText {
     max-width: 600px;
   }
 
@@ -100,7 +175,7 @@ a:hover {
     border-radius: 100%;
     max-width: 250px;
     object-fit: contain;
-  }
+  }  */
 
 
   /* nav bar related code */
@@ -115,7 +190,6 @@ a:hover {
   
   .navbar a {
     padding: 0.5em 1em;
-    color: black;
     /* color: var(--xblue); */
     text-decoration: none;
     transition: background 0.3s;
@@ -124,7 +198,7 @@ a:hover {
   /* .navbar a.active {
     font-style: italic;
     color: var(--xblue);
-    color: var(--secondary);
+    color: var(--s=econdary);
 
   } */
   
