@@ -20,17 +20,16 @@ a:hover {
   font-style: italic;
 }
 
-/* 
-  h1 {
-    font-size: x-large;
-  }
-  h2 {
-    font-size: large;
-    font-weight: lighter;
-  } */
 
   .containerFullWidth {
-    width: 100vw;
+    width: 100%;
+  }
+
+  .containerMidWidth {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    /* padding: 1em; */
   }
 
   .container {
@@ -47,32 +46,29 @@ a:hover {
   /* HERO SECTION*/
 
   .hero2 {
-    /* background-color: beige; */
     display: flex;
     flex-direction: column;
     align-self: center;
     justify-content: center;
+    align-items: center;
     padding: 1em;
-    padding-top: 4em;
-    padding-bottom: em;
-    /* padding-left: 3rem; */
-    /* padding-right: 3rem; */
+    padding-top: 5em;
+    padding-bottom: 3em;
     margin: 0 auto;
     /* position: relative; */
   }
 
   .heroText {
-    /* background-color: aliceblue; */
-    max-width: 580px; /* adding this so that empathy is the last word on the firs tline*/
-    /* font-size: xxx-large; */
-    font-size: 40px;
+    max-width: 800px; /* adding this so that empathy is the last word on the firs tline*/
+    font-size: 55px;
+    /* font-size: 40px; */
     text-align: center;
     line-height: 1.5;
   }
 
 
   .word {
-      animation-duration: 8s;
+      animation-duration: 7s;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in-out;
   }
@@ -80,31 +76,36 @@ a:hover {
   /* Keyframes for smooth fading in sequence */
   /* Color animations were AI-assisted */
   @keyframes colorInnovates {
-    0%, 10%   { color: var(--xblue); }
-    20%       { color: blue; }
-    30%       { color: blue; }
-    100%      { color: blue; }
+    0%        { color: var(--xblue); }
+    15%       { color: blue; }
+    40%       { color: blue; }
+    85%       { color: blue; }
+    100%      { color: var(--xblue); }
   }
   
   @keyframes colorEmpathy {
-    0%, 20%   { color: var(--xblue); }
+    0%, 15%   { color: var(--xblue); }
     30%       { color: purple; }
-    40%       { color: purple; }
-    100%      { color: purple; }
+    50%       { color: purple; }
+    85%       { color: purple; }
+    100%      { color: var(--xblue); }
   }
   
   @keyframes colorBuildAI {
     0%, 30%   { color: var(--xblue); }
-    40%       { color: green; }
-    50%       { color: green; }
-    100%      { color: green; }
+    45%       { color: yellowgreen; }
+    60%       { color: yellowgreen; }
+    85%       { color: yellowgreen; }
+    100%      { color: var(--xblue); }
   }
   
   @keyframes colorImpact {
-    0%, 40%   { color: var(--xblue); }
-    50%       { color: red; }
+    0%, 45%   { color: var(--xblue); }
     60%       { color: red; }
-    100%      { color: red; }
+    70%       { color: red; }
+    85%      { color: red; }
+    100%      { color: var(--xblue); }
+
   }
 
   /* Apply animations -- commenting out for now because it kind of hurts my eyes */
@@ -183,6 +184,7 @@ a:hover {
     justify-content: flex-end;
 
     font-weight: bold;
+    margin-top: 1em;
     padding: 0 0.25em;
     padding-right: 30px;
   }

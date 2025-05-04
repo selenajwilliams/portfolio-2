@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Project Cards</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
+      gap: 3em;  /* Maintain spacing between cards */
+      padding: 2em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .projectCard {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;  /* Flexible width based on grid */
+      max-width: 450px;  /* Max width of the card */
+      box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
+    }
+
+    .projectCard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .pcImage {
+      width: 100%;  /* Takes full width of the card */
+      height: 325px;
+      height: clamp(325px, 30vw, 350px);  /* Dynamic height based on viewport */
+      object-fit: cover;
+      border-radius: 15px;
+      transition: height 0.3s ease, width 0.3s ease;  /* Smooth transition */
+    }
+
+    .pcHeader {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin: 0.5em 0 0.3em;
+    }
+
+    .pcDesc {
+      font-size: 0.95em;
+    }
+
+    /* When screen width is below 650px, make 1 column */
+    @media (max-width: 650px) {
+      .projects {
+        grid-template-columns: 1fr;  /* One card per row */
+      }
+    }
+
+    /* When screen width is above 1100px, increase image size */
+    @media (min-width: 1100px) {
+      .pcImage {
+        height: 350px;
+      }
+    }
+
+    /* Ensure proper behavior when project cards are in a wider grid */
+    @media (min-width: 1200px) {
+      .projects {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Adjust grid for larger screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="projects">
+
+    <div class="projectCard">
+      <img class="pcImage" src="assets/kuri.webp" alt="social robot">
+      <p class="pcHeader">Bramble</p>
+      <p class="pcDesc">Helping home-buyers find their dream home</p>
+    </div>
+
+    <div class="projectCard">
+      <img class="pcImage" src="assets/kuri.webp" alt="social robot">
+      <p class="pcHeader">Humans to Robots Lab</p>
+      <p class="pcDesc">Increasing Health Access via a Social Robot</p>
+    </div>
+
+    <div class="projectCard">
+      <img class="pcImage" src="assets/kuri.webp" alt="social robot">
+      <p class="pcHeader">AI for Social Good</p>
+      <p class="pcDesc">Leveraging AI to address societal challenges</p>
+    </div>
+
+    <div class="projectCard">
+      <img class="pcImage" src="assets/kuri.webp" alt="social robot">
+      <p class="pcHeader">Inclusive Design</p>
+      <p class="pcDesc">Designing products for people of all abilities</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

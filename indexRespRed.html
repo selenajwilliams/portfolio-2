@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Project Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Full width container */
+    .containerFullWidth {
+      width: 100%;
+      background-color: antiquewhite;
+    }
+
+    /* Mid-width container, with max-width */
+    .containerMidWidth {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 1em;
+      background-color: aliceblue;
+    }
+
+    /* Grid layout for projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Auto fit with min/max width */
+      gap: 2em;
+      background-color: pink;
+    }
+
+    /* Project Card Styling */
+    .projectCard {
+      display: flex;
+      flex-direction: column;
+      background-color: #eee;
+      padding: 1em;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="containerFullWidth">
+    <div class="containerMidWidth">
+      <div class="projects">
+        <div class="projectCard">Project 1</div>
+        <div class="projectCard">Project 2</div>
+        <div class="projectCard">Project 3</div>
+        <div class="projectCard">Project 4</div>
+        <div class="projectCard">Project 5</div>
+        <div class="projectCard">Project 6</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

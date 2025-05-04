@@ -1,22 +1,120 @@
 /* project card related css */
 
 .projects {
-    display: flex;
+    /* polaroid approach */
+    /* display: flex;
     flex-direction: row;
     overflow: scroll;
-    /* padding-left: 50px; Create the space to shift the first card */
-    scroll-snap-type: x mandatory; /* Optional, for snapping if desired */
-    
+    scroll-snap-type: x mandatory; 
+     */
+
     /*flex grid approach*/
-    /* display: grid; */
-    /* flex-wrap: wrap; */
-    /* grid-template-columns: repeat(3, 1fr); */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* */
+    gap: 3em;
+    width: 100%;
+    padding: 2em; 
+    /* max-width: 1200px; */
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.projects::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+
+
+.projectCard {
+    display: flex;
+    /* background-color: aliceblue; */
+    flex-direction: column;
+    width: 100%;           /* allows card to fill its grid cell */
+    border-radius: 20px;
+    padding: 0 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 450px;  /* Max width of the card */
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
+    height: 100%;
+
 }
 
+.projectCard:hover {
+    transform: translateY(-8px);
+    /* box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    .pcHeader {
+        transform: skewX(-10deg);
+    }
+}
+
+.pcImage {
+    border-radius: 15px;
+    width: 100%;  /* Takes full width of the card */
+    height: clamp(325px, 30vw, 350px);  /* Dynamic height based on viewport */
+    object-fit: cover;
+    border-radius: 15px;
+    transition: height 0.3s ease, width 0.3s ease;  /* Smooth transition */
+}
+
+.pcHeader {
+    /* padding-left: 5px; */
+    font-weight: bold;
+    padding-top: 5px;
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0.5em 0 0.3em;
+
+}
+
+.pcDesc {
+    line-height: 1.5;
+    flex-grow: 1;              /* Ensure it expands to take available space */
+
+}
+
+
+/* mobile */
+@media (max-width: 900px) {
+    .projects {
+        background-color: beige;
+        grid-template-columns: repeat(1, 1fr);  /* 1 column layout */
+        padding: 1em;  /* Add some padding to the container */
+    }
+
+    .projectCard {
+        width: 90%;           /* Make the card take up 80% of the screen */
+        max-width: unset;     /* Remove the max-width restriction */
+        margin: 0 auto;       /* Center the card horizontally */
+        height: auto;         /* Adjust height accordingly */
+    }
+
+    .pcImage {
+        aspect-ratio: 4 / 3;
+        width: 100%;          /* Make the image fill the card's width */
+        height: 375px;        /* Give the image a reasonable height on small screens */
+
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .pcImage {
+      height: 350px;
+    }
+  }
+
+  /* Ensure proper behavior when project cards are in a wider grid */
+  @media (min-width: 1200px) {
+    .projects {
+      grid-template-columns: repeat(3, minmax(350px, 450px)); /* Ensure 3 columns, grow smoothly up to 450px */
+    }
+  }
+
+
+
+/* polaroid version */
+/* .projects::-webkit-scrollbar {
+    display: none; 
+}
 
 .projectCard {
     display: flex;
@@ -24,11 +122,6 @@
     width: fit-content;
     transition: transform 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-
-/* .projectCard:first-child {
-    margin-left: -50px;
-} */
 
 
 .projectCard:hover {
@@ -45,14 +138,12 @@
 }
 
 .pcHeader {
-    /* text-align: le; */
     font-weight: bold;
     line-height: 2;
 
 }
 
 .pcDesc {
-    /* text-align: center; */
     font-size: smaller;
     line-height: 2;
-}
+} */
