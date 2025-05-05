@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Unordered List</title>
+  <style>
+    :root {
+      --xblue: #4D74A4;
+      --secondary: #333;
+      --accent: #f1f1ed;
+      --xdark: #1A1A1A;
+      --speed: 60s;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--xblue);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: unset;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover {
+      font-style: italic;
+    }
+
+    .containerFullWidth {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 0 clamp(10px, 5vw, 3rem);
+      margin: 0 auto;
+      max-width: 900px;
+      justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding: 0 clamp(10px, 1vw, 3rem);
+      }
+    }
+
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* Custom unordered list styles */
+    ul.custom-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 1.5rem 0;
+      color: var(--xblue);
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    ul.custom-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    ul.custom-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Research Focus Areas</h1>
+    <ul class="custom-list">
+      <li>Exploring the dropdown accessibility landscape</li>
+      <li>Mapping out digital interactions through state diagrams</li>
+      <li>Analyzing accessibility of popular dropdown interfaces</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 Your Name</p>
+  </div>
+</body>
+</html>

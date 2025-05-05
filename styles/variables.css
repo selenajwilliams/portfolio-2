@@ -39,13 +39,11 @@ a:hover {
   display: flex;
   flex-direction: column;
   padding: 0 clamp(10px, 5vw, 3rem);
-  /* padding: 0 5em; */
   margin: 0 auto;
-  /* background-color: pink; */
   max-width: 900px;
   justify-content: center;
-  /* align-items: center; */
 }
+
 @media (max-width: 900px) {
   .container {
     padding: 0 clamp(10px, 1vw, 3rem);

@@ -13,7 +13,10 @@
 
 .section {
     /* padding-top: 2em; */
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
+    /* margin-bottom: 1px; */
     /* background-color: beige; */
 }
 
@@ -22,40 +25,54 @@
     margin-top: 1em;
     margin-bottom: 0; 
     color: var(--xblue); 
-    
 }
+
+.section h3 {
+    margin-top: 1em;
+    margin-bottom: 0;
+    margin: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    /* padding-bottom: 10px; */
+}
+
+.section h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight:normal;
+}
+
 
 .section p {
     font-size: 1.1rem; 
     line-height: 1.6;
     color: #333; 
+    margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 0;
 }
 
-/* 
-.threeSquares {
-    display: flex;
-    flex-direction: column;
-    
+img {
+    height: auto;
 }
 
-.square {
-    border-radius: 15px;
-    text-align: center
-} */
 
+
+/* SQUARES */
 .threeSquares {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
     margin-top: 2rem;
+    min-height: 100px;
   }
-  
+
+
+
   .square {
     flex: 1 1 250px;
     max-width: 300px;
+    /* min-height: 50px; */
     min-height: max-content;
     background-color: var(--accent);
     border-radius: 12px;
@@ -65,7 +82,20 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+    justify-content: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
     /* padding: 10px 10px; */
+  }
+
+  .square:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+    h3 {
+        font-style: italic;
+    }
   }
   
   /* Ensures equal height among squares */
@@ -77,7 +107,9 @@
     font-weight: bolder;
     text-align: center;
     color: #040404;
-    margin: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* margin: 1em; */
   }
   
   .square p {
@@ -87,5 +119,60 @@
     line-height: 1.5;
     text-align: center;
     margin: 0;
+  }
+
+  .imageGallery {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    /* max-width: 100%; Set a fixed max width */
+    flex-direction: row;
+    overflow-x: auto; /* Make it scrollable */
+  }
+  
+  .imageGallery figure {
+    margin-right: 10px; 
+    text-align: center; 
+    background-color: var(--accent);
+    border-radius: 30px;
+  }
+  
+  .imageGallery img {
+    height: 500px; /* Fixed height for all images */
+    width: auto; /* Let the width adjust proportionally */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    
+  }
+  
+  .imageGallery img:hover {
+    cursor: zoom-in; /* Change cursor to a plus sign (zoom-in) */
+  }
+  
+  .imageGallery figcaption {
+    margin-top: 5px; 
+    font-size: large; 
+    font-style: italic;
+    font-weight: bold;
+    justify-content: center;
+  }
+  
+  /* Optional styling for enlarged image modal */
+  #imageModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  #imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
   }
   
