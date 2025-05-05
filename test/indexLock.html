@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Protected</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <!-- <link rel="stylesheet" href="variables.css"> -->
+
+  <style>
+
+    :root {
+    --xblue: #4D74A4;
+    --secondary: #333;
+    --accent: #f1f1ed;
+    --bgDark: #1A1A1A;
+    --dark: #333;
+    --bright-blue: #039be5;
+    }
+
+    .lock-container {
+      min-height: 100vh;
+      background-color: var(--xblue);
+      /* background-color: var(--bgDark); */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--accent);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .lock-icon {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .password-box {
+      background-color: var(--secondary);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .password-box h1 {
+      margin-bottom: 0.5rem;
+      color: var(--xblue);
+    }
+
+    .password-box p {
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      color: var(--accent);
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem; 
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      background-color: var(--accent);
+      color: var(--dark);
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--xblue);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: var(--bright-blue);
+    }
+
+    .return-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--xblue);
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .return-link:hover {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lock-container">
+      <div class="lock-icon">🔒</div>
+      <h1>Password Required</h1>
+      <p>If you don’t have the password but would like it, please email me at <a href="mailto:alex@alexhadik.com">alex@alexhadik.com</a>.</p>
+      <form action="your-password-check-endpoint" method="POST">
+        <input type="password" name="password" placeholder="Enter password" required>
+        <button type="submit">Submit</button>
+      </form>
+
+
+    <a href="/#projects" class="return-link">&larr; Return to Work</a>
+  </div>
+
+</body>
+</html>

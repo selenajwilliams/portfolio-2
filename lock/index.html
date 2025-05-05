@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Protected</title>
+  <link rel="stylesheet" href="../styles/variables.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <div class="containerFullWidth">
+        <div class="lockContainerFullWidth">
+            
+            <div class="lockArea">
+            <img class="lockIcon" src="../assets/icons/lock.png" alt="lock icon">
+              
+              <h1>Password Required</h1>
+              <p>I am very excited to share the work that I’ve done on this project, but I have to password protect this page due to my NDA.</p>
+              <p>Unfortunately, this page will be kept private for the near future.</p>
+              <!-- <p>If you received a password for this site, enter it here and keep on browsing.</p>
+              <p>If you don’t have the password but would like it, please email me at 
+                <a href="mailto:selena_williams@brown.edu">selena_williams@brown.edu</a>.
+              </p> -->
+        
+              <form action="your-password-check-endpoint" method="POST">
+                <input type="password" name="password" placeholder="password" required>
+                <button type="submit">&rarr;</button>
+              </form>
+
+
+              <a href="/#projects" class="returnLink">&larr; Return to Work</a>
+            </div>
+          </div>
+    </div>
+
+
+</body>
+</html>
