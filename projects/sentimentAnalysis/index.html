@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="../stylesAllProjects.css">
+    <!-- <link rel="stylesheet" href="../stylesAllProjects.css.css"> -->
+    <link rel="stylesheet" href="../../styles/variables.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="containerFullWidth">
+        <div class="hero">
+            <p>hero text here</p>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Overview</h2>
+                <!-- <div class="quote">
+                    Media is all around you. Is yours positive or negative?
+                </div> -->
+                <p>
+                    FusionFeel is an attention-based multimodal sentiment analysis model that classifies images and captions as expressing either positive or negative sentiment. Built as a final project for CSCI 1430 (Computer Vision), FusionFeel achieved competitive <b>94.5%</b> accuracy using only <b>17,000 data points</b>—nearly half the size of the training set used in prior state-of-the-art approaches. 
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Problem</h2>
+                <p>How can we accurately and efficiently classify sentiment in images and captions, especially in ambiguous or noisy data, like user-generated content from platforms such as Flickr?
+                </p>
+                <!-- <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p> -->
+            </div>
+
+            <div class="section">
+                <h2>Challenge</h2>
+                <div class="threeSquares">
+                    <div class="square 1">
+                        <h3>Noisy Data</h3>
+                        <p>
+                            Gibberish captions and hashtags like added noise to data
+                        </p>
+                    </div>
+                    <div class="square 2">
+                        <h3>Computational Intensity</h3>
+                        <p>
+                            Image processing is computationally intense
+                        </p>
+                    </div>
+
+                    <div class="square 3">
+                        <h3>Ambiguous Categories</h3>
+                        <p>
+                            Categories like “cloud” and “glass” complicate ground-truth labels
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Research & Insights</h2>
+                <h3>Research</h3>
+                <p>
+                    We reviewed two main sources: 
+                </p>
+                <ul>
+                    <li>The <b>MASAD dataset</b> creators, who used a multi-layer transformer with image-text-aspect interaction.</li>
+                    <li>Huidong et al., whose <b>CMA-CLIP</b> model inspired our pipeline by incorporating CLIP with transformer attention and keyless fusion.</li>
+                </ul>
+
+                <h3>Insights</h3>
+                <ul>
+                    <li>Multimodal sentiment analysis benefits from <b>fine-grained, cross-modal attention</b>.</li>
+                    <li>Noise in user-submitted captions required <b>rigorous preprocessing</b> to ensure input consistency.</li>
+                    <li>To manage computational intensity of token-level CLIP embeddings, we asked, <b>"Can we compute embeddings at the sentence/image level?"</b></li>
+
+                </ul>
+            </div>
+
+
+            <div class="section">
+                <h2>Solution</h2>
+                <p>
+                    We developed a robust, multimodal pipeline that achieves near state-of-the-art accuracy using less than half the data of comparable approaches.
+                </p>
+
+                <img src="assets/architecture.png" alt="model architecture diagram">
+                <figcaption>FusionFeel Architecture</figcaption>
+
+
+
+            <div class="section">
+                <h2>Results</h2>
+
+            
+                <div class="threeSquares">
+                    <div class="square 1">
+                        <h3>94.5% Accuracy</h3>
+                        <p>
+                            94.5% test accuracy, compared to 95.6% with full 38k dataset.
+                        </p>
+                    </div>
+                    <div class="square 2">
+                        <h3>Reduced Traning Data</h3>
+                        <p>
+                            Our approach requires less compute–trained on 50% of data.
+                        </p>
+                    </div>
+
+                    <div class="square 3">
+                        <h3>Strong Generalization</h3>
+                        <p>
+                            Our approach generalizes well across 43 diverse aspect categories.
+                        </p>
+                    </div>
+                </div>
+
+                <img style="padding-top: 20px;"  src="assets/results.png" alt="results table">
+
+                <img src="assets/trainLoss.png" alt="train loss graph">
+                <img src="assets/testLoss.png" alt="test loss graph">
+            </div>
+
+            <div class="section">
+                <h2>Model Pipeline</h2>
+                <h3>Data Preprocessing</h3>
+                    <ol>
+                        <li style="color: var(--xblue);"><b>
+                            Cleaned and normalized images and captions, removing irrelevant tokens (e.g. hashtags) as needed.
+                        </b></li>
+                        
+                        <table>
+                          <tr>
+                            <td>Caption After Preprocessing</td>
+                            <td>Caption Before Preprocessing</td>
+                          </tr>
+                          <tr>
+                            <td style="
+                            word-break: break-all;
+                            white-space: normal;
+                            max-width: 400px;
+                            ">
+                              and then starts to cry . . . .
+                            </td>
+                            <td style= "word-break: break-all; white-space: normal; max-width: 400px;">
+                              and then starts to cry . . . .###http://farm1.static.flickr.com/140/326606874_38f9a12477.jpg###baby&lt;tag&gt;babies&lt;tag&gt;cutebaby&lt;tag&gt;cutebabies&lt;tag&gt;infant&lt;tag&gt;infants&lt;tag&gt;cryingbaby
+                            </td>
+                          </tr>
+                        </table>
+
+                        <li><b>
+                            Applied random tranformations to images to improve generalization.
+                        </b></li>
+                        <img style="padding-top: 10px" src="assets/dataTransform.png" alt="data transformations applied to baby, insect, spider classes">
+                    </ul>
+                  
+
+                <h3>Embedding Exraction with CLIP</h3>
+                <!-- <ul> -->
+                    <p>Converted image-caption pairs into 512-dimensional vectors in a shared feature space.
+                    </p>
+                <!-- </ul> -->
+                <h3>Cross-Modal Attention</h3>
+                <p>Applied a transformer encoder to contextualize embeddings.</p>
+                <p>Introduced a keyless attention module to dynamically weight image vs. text contributions.</p>
+
+
+                <h3>Classification Head</h3>
+                <p>Passed fused embeddings through a 3-layer neural classifier to predict binary sentiment.</p>
+                <p>Used Binary Cross-Entropy with Logits Loss and AdamW optimizer for training.</p>
+            </div>
+
+            <div class="section">
+                <h2>Impact</h2>
+                <h3>Training Data Efficiency</h3>
+                <p>Our innput-level embeddings are a novel contribution that advance multi-modal research, offering salient compute gains as multimodal AI tends to be computationally intense</p>
+                <h3>Scalable Emotion-Aware Access</h3>
+                <p>Our efficient approach lowers the barrier to entry for emotion-aware AI, thereby improving scalability</p>
+                <h3>Multimodal AI Innovation</h3>
+                <p>We validate insights on the benefits of cross-modal attention, particularly in noisy-data settings</p>
+            </div>
+
+            <div class="section">
+                <h2>Accessibility & Inclusion</h2>
+                <p>
+                    While not a UI-facing product, FusionFeel contributes to broader accessibility in sentiment AI:
+                </p>
+                <ul>
+                    <li>Efficient training with fewer samples allows teams with limited compute to build effective models.</li>
+                    <li>Potential applications include mental health (analyzing user sentiment across media), especially valuable for under-resourced populations.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <!-- <h2>Discussion</h2>
+                <p>
+                    Our work highlights:
+                </p>
+                <h3>Importance of adaptive weighting in multimodal models</h3>
+                <h3>Efficient training pipelines can outperform brute-force data scalining when compute is limited</h3> -->
+
+                <h2>Future Work</h2>
+                <p>Future work can explore extending FusionFeel to multiclass sentiment classification (e.g., joy, anger, sadness) and incorporating temporal context from video or sequential caption data.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>Thank You</h2>
+                <p>
+                    Thank you to my research collaborators Scott Petersen and Halleluiah Girum, and to our advisor, Shania Guo.
+                </p>
+            </div>
+            
+
+        </div>
+
+        <footer class="footer">
+        </footer>
+    </div>
+</body>
+</html>

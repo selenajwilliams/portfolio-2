@@ -20,8 +20,11 @@
         <div class="container">
             <div class="section">
                 <h2>Overview</h2>
+                <div class="quote">
+                    What if point-of-sale systems worked… like magic?
+                </div>
                 <p>
-                    In this accessibility-focused redesign, I designed a new search-based filter feature to navigate dropdown menus more efficiently via keyboard controls and reduce cognitive overload
+                    This project explores how Brown Dining Services workers interact with point-of-sale (POS) systems through interviews, interface sketches, user personas, and journey mapping to offer data-driven improvement recommendations.
                 </p>
             </div>
 
@@ -29,89 +32,128 @@
                 <h2>Problem</h2>
                 <div class="threeSquares">
                     <div class="square 1">
-                        <h3>Heading 1</h3>
+                        <h3>Outdated UI</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            POS systems are outdated and need a refresh
                         </p>
                     </div>
                     <div class="square 2">
-                        <h3>Heading 2</h3>
+                        <h3>System Reliability</h3>
                         <p>
-                            P Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            Outages led to long wait times, causing frustration for students and workers 
                         </p>
                     </div>
 
                     <div class="square 3">
-                        <h3>Heading 3</h3>
+                        <h3>Stressful Rush Periods</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            Rush periods are stressful and system reliability issues make this worse.
                         </p>
                     </div>
-
-
                 </div>
-                <!-- <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p> -->
             </div>
 
             <div class="section">
                 <h2>Research & Insights</h2>
+                <h3>User Interviews</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    From a series of semi-structured interviews, I gained the following insights:
                 </p>
+                <ol>
+                    <li><b>Dining workers appreciate the lack of menu nesting</b>, as 2-click transactions make rush periods more efficient</li>
+                    <li><b>Dining workers have significant demands placed on their attention</b> like answering student questions, providing take-out boxes, and standing for hours in distracting sensory environments. </li>
+                    <li><b>Dining workers find the UI to be simple</b>, regardless of whether they perceive themselves as tech-savvy. </li>
+                    <li><b>System outages cause delays and increase stress</b> during busy periods.</li>
+                </ol>
             </div>
 
             <div class="section">
                 <h2>Design Process</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <h3>System Sketch</h3>
+                <img src="assets/InterfaceSketch.jpeg" alt="interface sketch" onclick="enlargeImage(this)">
+                <p>A visual sketch of the POS interface helped to understand its simplicity and how its features supported efficient workflows.</p>
+                
+                <h3>User Personas</h3>
+           
+                <!--  <img src="https://images6.alphacoders.com/115/thumb-1920-1153173.jpg">
+                <img src="https://cdn.fstoppers.com/styles/full/s3/photos/169523/03/15/5432f37cd2641b07c95fbaca58e6c04e.jpg"> -->
+                <h4>Persona #1: Manager Mike</h4>
+                <img style="background-color: var(--accent); border-radius: 30px; margin-bottom: 1.5em;" src="assets/MichaelPersona.png" alt="Manager Mike Persona" onclick="enlargeImage(this)">
+                
+                <h4>Persona #2: Power User Jennifer</h4>
+                <!-- <p>For users like Jennifer, it's important that the system be fast, reliable, and have low-cognitive demand in order to effectively multitask through long shifts. -->
                 </p>
-            </div>
+                <img style="background-color: var(--accent); border-radius: 30px; margin-bottom: 1.5em;" src="assets/JenniferPersona.png" alt="Jennifer Persona" onclick="enlargeImage(this)">
 
-            <div class="section">
-                <h2>Solution</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
+                
+                <h3>Storyboarding: Jennifer's Ratty Lunch Rush</h3>
+                <img src="assets/Storyboard.jpeg" alt="jennifer's ratty lunch rush" onclick="enlargeImage(this)">
+                <p>A storyboard illustrated Jennifer’s experience during a lunch rush, highlighting the challenges of multitasking under pressure.</p>
 
-            <div class="section">
-                <h2>Final Design</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
             </div>
 
             <div class="section">
                 <h2>Accessibility & Inclusion</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    The design was focused on simplicity and ease of use, ensuring accessibility for workers with varying levels of tech-savviness. The large, colorful buttons and straightforward interactions made the system intuitive, even for those who might not be familiar with technology.
                 </p>
+            </div>
+
+            <div class="section">
+                <h2>Solution</h2>
+                <h3>Design Recommendations</h3>
+                <p>Based on the the user and design research, I developed the following design recommendations.</p>
+                <ol>
+                    <li>Improved back-end reliability to reduce stress during rush hour</li>
+                    <li>Simplifying redundant menu options for dining halls with more options</li>
+                    <li>Auto-prioritize most commonly ordered meals to reduce cognitive load over long shifts </li>
+                </ol>
             </div>
 
             <div class="section">
                 <h2>Impact</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <div class="threeSquares">
+                    <div class="square 1">
+                        <h3>Less Stress</h3>
+                        <p>
+                            Less stress during rush periods due to improved reliability
+                        </p>
+                    </div>
+                    <div class="square 2">
+                        <h3>Improved Efficiency</h3>
+                        <p>
+                            Improved efficiency leads to better experiences for workers & students
+                        </p>
+                    </div>
+
+                    <div class="square 3">
+                        <h3>Joyful User Experience</h3>
+                        <p>
+                            Joyful user-experiences thanks to lower cognitive load
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="section">
                 <h2>Learnings</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <h3>Empathy is a superpower.</h3>
+                <p> Understanding people’s frustrations is an essential, exciting step to better design, better user experiences, and a better world. 
+                </p>
+                <h3>Ask. Listen. Learn.</h3>
+                <p>Through a series of semi-structured user interviews, I understood not only benefits and challenges of POS systems – I also understood the power of interviews in understanding the world around me and how to improve it.
+                </p>
+                <h3>Every level of the stack impacts user experience.</h3>
+                <p>In this project, although users reported no issues with the interface design, they reported issues with the underlying system performance and reliability, which is an essential part of  
                 </p>
             </div>
             
             <div class="section">
                 <h2>Thank You</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Thank you to the dining services workers who shared their time and insights which were vital to understanding challenges surrounding POS experiences. 
                 </p>
             </div>
-            
-
         </div>
 
         <footer class="footer">

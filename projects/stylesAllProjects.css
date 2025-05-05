@@ -43,59 +43,124 @@
 }
 
 
-.section p {
+.section p, ul, ol {
     font-size: 1.1rem; 
     line-height: 1.6;
-    color: #333; 
+    /* color: #333;  */
     margin-top: 0;
     margin-bottom: 0;
 }
 
-img {
-    height: auto;
+/* quote styling is adapted from this website: https://codepen.io/Rases/pen/pogVVwp */
+.quote {
+    margin-left: 5px;
+    border-left:  0.5em solid var(--accent);
+    font-weight: bold;
+    color: #333;
+    font-style: italic;
+
+    /* position: relative; */
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+
 }
 
 
+img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    /* padding-bottom: 1em; */
+}
+
+/* .imageGallery figure {
+    width: 100%;
+}  */
+
+* {
+    font-size: 1.1rem; 
+    line-height: 1.6;
+    color: #333; 
+}
+
+/* li {
+    font-size: 1.1em;
+} */
+
+/* li:hover {
+    font-style: italic;
+} */
+
+figcaption {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+strong:hover, b:hover {
+    color: var(--xblue);
+}
+
+
+table, th, td {
+    border: 1px solid var(--dark);
+    border-collapse: collapse;
+    /* background-color: var(--accent); */
+    border-radius: 15px;
+  }
+
+  
+  th, td {
+    padding: 8px; /* Optional: adds spacing inside cells */
+  }
+  
 
 /* SQUARES */
 .threeSquares {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    flex-wrap: nowrap; /* prevent wrapping */
     justify-content: center;
+    gap: 1.5rem;
     margin-top: 2rem;
-    min-height: 100px;
   }
-
-
-
+  
   .square {
-    flex: 1 1 250px;
+    flex: 1 1 0;
+    min-width: 250px;
     max-width: 300px;
-    /* min-height: 50px; */
-    min-height: max-content;
     background-color: var(--accent);
     border-radius: 12px;
-    /* padding: 0.5em; */
     padding: 10px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
-    text-align: left;
     justify-content: center;
-
+    text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-    /* padding: 10px 10px; */
   }
-
+  
   .square:hover {
     transform: translateY(-8px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
 
-    h3 {
+  h3 {
+    color: var(--xblue);
+  }
+
+  .c {
+    text-align: center;
+  }
+
+  h3:hover {
         font-style: italic;
-    }
+
   }
   
   /* Ensures equal height among squares */
@@ -128,26 +193,30 @@ img {
     /* max-width: 100%; Set a fixed max width */
     flex-direction: row;
     overflow-x: auto; /* Make it scrollable */
+    cursor: zoom-in;
+  }
+
+
+  .imgEnlarge {
+    cursor: zoom-in; 
   }
   
   .imageGallery figure {
-    margin-right: 10px; 
+    margin-right: 5px; 
     text-align: center; 
     background-color: var(--accent);
     border-radius: 30px;
+
   }
   
   .imageGallery img {
-    height: 500px; /* Fixed height for all images */
+    min-height: 300px; /* Fixed height for all images */
     width: auto; /* Let the width adjust proportionally */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    
+    min-width: 250px;
+    overflow-x: scroll;
+
   }
-  
-  .imageGallery img:hover {
-    cursor: zoom-in; /* Change cursor to a plus sign (zoom-in) */
-  }
-  
+
   .imageGallery figcaption {
     margin-top: 5px; 
     font-size: large; 

@@ -1,11 +1,5 @@
 /* styles.css */
 
-  .containerMidWidth {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   #projects {
     scroll-margin-top: 10px;
   }
@@ -147,7 +141,51 @@
 
 
   /* nav bar related code */
+  /* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 0 30px;
+    width: 100%;
+    background-color: beige;
+  }
+  
+  .navbar-left a,
+  .navbar-right a {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .navbar-left {
+    justify-content: start;
+  } */
+
   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 0 30px;
+  }
+  
+  .navbar-left a,
+  .navbar-right a {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+
+  .navbar-right {
+    display: flex;
+  }
+  
+
+
+  /* .navbar {
     display: flex;
     justify-content: flex-end;
 
@@ -155,7 +193,7 @@
     margin-top: 1em;
     padding: 0 0.25em;
     padding-right: 30px;
-  }
+  } */
   
   .navbar a {
     padding: 0.5em 1em;

@@ -2,9 +2,13 @@
     --xblue: #4D74A4;
     --secondary: #333;
     --accent: #f1f1ed;
-    --xdark: #1A1A1A;
+    --bgDark: #1A1A1A;
+    --dark: #333;
+    --bright-blue: #039be5;
     /* --bannerHeight: 150px; */
     --speed: 60s;
+
+    --container-width: 900px;
   }
 
 
@@ -31,16 +35,21 @@ a:hover {
 
 .containerFullWidth {
   width: 100%;
-  /* background-color: greenyellow; */
+}
+
+.containerMidWidth {
+  width: 80%;
+  min-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0;
 }
 
 .container {
-  /* background-color: blanchedalmond; */
   display: flex;
   flex-direction: column;
   padding: 0 clamp(10px, 5vw, 3rem);
   margin: 0 auto;
-  max-width: 900px;
+  max-width: var(--container-width);
   justify-content: center;
 }
 
@@ -63,4 +72,14 @@ a:hover {
 
 .footer p {
   margin: 0;
+}
+
+
+.sideBySideImgs {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBySideImgs img {
+  max-width: 45%;
 }
