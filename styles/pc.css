@@ -33,7 +33,11 @@
     max-width: 450px;  /* Max width of the card */
     box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
     height: 100%;
+}
 
+/* make it so that links are not underlined (e.g. the project card text) */
+ a {
+    text-decoration: none;
 }
 
 .projectCard:hover {

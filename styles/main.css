@@ -1,50 +1,13 @@
 /* styles.css */
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: var(--xblue);
-  }
-
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-a {
-  color: unset;
-  text-decoration-thickness: 1px;
-
-}
-
-a:hover {
-  font-style: italic;
-}
-
-
-  .containerFullWidth {
-    width: 100%;
-  }
-
   .containerMidWidth {
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    /* padding: 1em; */
   }
 
   #projects {
     scroll-margin-top: 10px;
-  }
-
-  .container {
-    /* background-color: blanchedalmond; */
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 800px;
-    justify-content: center;
-    /* align-items: center; */
   }
 
 
