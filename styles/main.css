@@ -8,6 +8,7 @@ body {
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -30,6 +31,10 @@ a:hover {
     margin: 0 auto;
     padding: 0;
     /* padding: 1em; */
+  }
+
+  #projects {
+    scroll-margin-top: 10px;
   }
 
   .container {
@@ -109,10 +114,10 @@ a:hover {
   }
 
   /* Apply animations -- commenting out for now because it kind of hurts my eyes */
-  /* .innovates { animation-name: colorInnovates; }
+  .innovates { animation-name: colorInnovates; }
   .empathy   { animation-name: colorEmpathy; }
   .build-ai  { animation-name: colorBuildAI; }
-  .impact    { animation-name: colorImpact; } */
+  .impact    { animation-name: colorImpact; }
 
 
   .heroIcons {
