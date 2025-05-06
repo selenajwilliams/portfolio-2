@@ -100,6 +100,9 @@
     align-items: center;
     font-weight: bold;
     padding: 1em 30px;
+    padding-top: 1.5em;
+    /* margin-top: 1rem; */
+    /* background-color: pink; */
   }
   
   .navbar-left a,
@@ -143,7 +146,7 @@
     font-style: italic;
   }
   
-
+/* 
 .hamburger {
   display: none;
   flex-direction: column;
@@ -175,5 +178,5 @@
   .menu.active {
     display: block;
   }
-}
+} */
 
