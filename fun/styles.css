@@ -63,6 +63,8 @@
     object-fit: cover;
     display: block;
 
+    transform: rotate(180deg);
+
 
     /* filter: blur(10px);
     opacity: 0;
