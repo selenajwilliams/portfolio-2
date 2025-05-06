@@ -80,7 +80,7 @@
 @media (max-width: 900px) {
     .projects {
         background-color: beige;
-        grid-template-columns: repeat(1, 1fr);  /* 1 column layout */
+        grid-template-columns: repeat(1, 1fr) !important;  /* 1 column layout */
         padding: 1em;  /* Add some padding to the container */
     }
 
