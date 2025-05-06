@@ -29,12 +29,10 @@
         <div class="text">
           <h1 class="title">Things That Bring Me <span class="animate">Joy</span></h1>
           <p class="subtitle">Including but not limited to boba, fitness, community & culture. 🫶🏽 </p>
-
         </div>
-
-        
       </div>
 
+      
 
       <div class="image-grid">
         <div class="image-container"><img src="assets/mara.png" alt="standing jumping"></div>
@@ -55,30 +53,13 @@
         <div class="image-container"><img src="assets/khsMeal.png" alt="meal w/ KHS finalists"></div>
 
 
-
-
-        <!-- <div class="image-container"><img src="https://via.placeholder.com/600x400" alt="EESA gathering"></div>
-        <div class="image-container"><img src="https://via.placeholder.com/600x400" alt="Image 3"></div>
-        <div class="image-container"><img src="https://via.placeholder.com/600x400" alt="Image 4"></div>
-        <div class="image-container"><img src="https://via.placeholder.com/600x400" alt="Image 5"></div>
-        <div class="image-container"><img src="https://via.placeholder.com/600x400" alt="Image 6"></div> -->
-      </div>
-
-    <!-- <div class="gallery">
-        <div>
-            <img src="" alt="">
-        </div>
-        <div class="v-stretch">
-            <img src="" alt="">
-        </div>
-        <div class="h-stretch">
-            <img src="" alt="">
-        </div>
-
-        <div class="big-stretch">
-            <img src="" alt="">
-        </div>
- -->
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('img').forEach(img => {
+              img.setAttribute('loading', 'lazy');
+            });
+          });
+        </script>
 
     </div>
   </div>
