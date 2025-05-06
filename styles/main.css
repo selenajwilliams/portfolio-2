@@ -146,3 +146,36 @@
     font-style: italic;
   }
   
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu.active {
+    display: block;
+  }
+}
