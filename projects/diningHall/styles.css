@@ -1,0 +1,23 @@
+  .fade-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    animation: fade 6s infinite;
+    opacity: 0;
+  }
+  
+  .img1 {
+    animation-delay: 0s;
+  }
+  
+  .img2 {
+    animation-delay: 3s;
+  }
+  
+  @keyframes fade {
+    0%, 100% { opacity: 0; }
+    25%, 75% { opacity: 1; }
+  }

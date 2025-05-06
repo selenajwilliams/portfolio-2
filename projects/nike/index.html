@@ -7,15 +7,77 @@
     <link rel="stylesheet" href="../stylesAllProjects.css">
     <!-- <link rel="stylesheet" href="../stylesAllProjects.css.css"> -->
     <link rel="stylesheet" href="../../styles/variables.css">
+    <link rel="stylesheet" href="../../styles/main.css">
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
     <div class="containerFullWidth">
-        <div class="hero">
-            <p>hero text here</p>
+
+        <div class="containerMidWidth">
+            <div class="navbar">
+                <div class="navbar-left">
+                  <a href="/">SW</a>
+                </div>
+                <div class="navbar-right">
+                  <a href="/#projects">Work</a>     
+                  <a href="/fun/">Fun</a>           
+                  <a href="/about/">About</a>       
+                  <a href="/resume/resume.pdf" target="_blank">Resume</a>
+                </div>
+              </div>
         </div>
+
+            <div class="hero">
+                <div class="hero-left">
+                    <div class="company-title">Interaction Design | Brown University</div>
+                    <h1 class="dramatic-title">Nike For All: <br/>Accessibility-Focused Dropdown Menu Redesign</h1>
+                    <div class="divider"></div>
+        
+                    <div class="info-grid">
+                        <div class="info-section">
+                            <div class="info-title">My Role</div>
+                            <div class="info-content">
+                                User Research<br>
+                                Interation Design
+                                UI/UX
+                            </div>
+                        </div>
+        
+                        <div class="info-section">
+                            <div class="info-title">My Scope</div>
+                            <ol class="scope-list">
+                                <li>Conducted Market Research</li>
+                                <li>Interaction Analysis</li>
+                                <li>Ideated & Developed Solution</li>
+                            </ol>
+                        </div>
+        
+                        <div class="info-section">
+                            <div class="info-title">The Team</div>
+                            <div class="info-content">
+                                Just me!
+                            </div>
+                        </div>
+        
+                        <div class="info-section">
+                            <div class="info-title">Impact</div>
+                            <div class="info-content">
+                                Designed prototype to reduce cognitive load and improve navigability for keyboard-only users
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hero-right">
+                    <div class="placeholder-image">
+                        <img src="assets/NikeAfter.png" alt="nike dropdown menu redesign"  onclick="enlargeImage(this)">
+                    </div>
+                </div>
+            </div>
+
+
 
         <div class="container">
 
@@ -83,7 +145,7 @@
         </div>
                 
         <!-- Modal for enlarging image -->
-        <div id="imageModal" onclick="closeModal()">
+    <div id="imageModal" onclick="closeModal()">
             <img id="modalImage" src="" alt="Enlarged Image">
         </div>
         <!-- functionality to enlarge the image -->
@@ -156,11 +218,6 @@
             <div class="section">
                 <h2>Final Design</h2>
                 <img src="assets/NikeBefore.png" alt="nike with accessible dropdown">
-            </div>
-
-            <div class="section">
-                <h2>Accessibility & Inclusion</h2>
-
             </div>
 
             <div class="section">
