@@ -4,9 +4,7 @@
     scroll-margin-top: 10px;
   }
 
-
   /* HERO SECTION*/
-
   .hero2 {
     display: flex;
     flex-direction: column;
@@ -27,7 +25,6 @@
     text-align: center;
     line-height: 1.5;
   }
-
 
   .word {
       animation-duration: 7s;
@@ -179,3 +176,4 @@
     display: block;
   }
 }
+
